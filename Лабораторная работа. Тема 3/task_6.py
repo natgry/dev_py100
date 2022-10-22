@@ -10,9 +10,6 @@ for pos, value in enumerate(list_numbers):
         max_value = value
         max_index = pos
 
-for pos, value in enumerate(list_numbers):
-    if pos == max_index:
-        list_numbers[last_index] = list_numbers[pos]
-        list_numbers[pos] = last_value
+list_numbers[max_index], list_numbers[-1] = list_numbers[-1], list_numbers[max_index]
 
 print(list_numbers)
