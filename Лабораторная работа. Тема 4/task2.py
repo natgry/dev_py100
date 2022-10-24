@@ -5,7 +5,7 @@ def get_count_char(str_):
             if char not in chars.keys():
                 chars[char] = 1
             else:
-                chars[char] = chars[char] + 1
+                chars[char] += 1
     return chars
 
 
