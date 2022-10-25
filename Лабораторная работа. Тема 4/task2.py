@@ -2,7 +2,7 @@ def get_count_char(str_):
     chars = dict()
     for char in str_.lower():
         if char.isalpha():
-            if char not in chars.keys():
+            if char not in chars:
                 chars[char] = 1
             else:
                 chars[char] += 1
