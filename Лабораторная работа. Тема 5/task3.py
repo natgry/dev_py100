@@ -3,8 +3,11 @@ from random import randint
 
 def get_unique_list_numbers() -> list[int]:
     set_ = set()
-    while len(set_) < 15:
-        set_.add(randint(-10, 10))
+    start = -10
+    stop = 10
+    count = 15
+    while len(set_) < count:
+        set_.add(randint(start, stop))
 
     return list(set_)  # TODO написать функцию для получения списка уникальных целых чисел
 
