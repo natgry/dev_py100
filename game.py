@@ -1,5 +1,6 @@
 from math import sqrt
 import os
+from string import digits
 from typing import Union
 
 """
@@ -48,9 +49,9 @@ def play_game(field: list, who_starts: int) -> None:
             user_choice = input(f"Ход для игрока {get_role_char(who_goes)}. "
                                     f"Введите индекс ячейки игрового поля\n")
             try:
-                assert user_choice
+                assert user_choice and user_choice in digits
             except AssertionError:
-                print(f"Введено пустое значение")
+                print(f"Введено пустое значение или не цифра")
                 draw_field(field)
                 continue
 
