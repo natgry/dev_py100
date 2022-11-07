@@ -15,7 +15,7 @@ from typing import Union
 """
 
 ROLE_INT = {0: " ",
-            1: "O",
+            1: "0",
             2: "X"}
 
 ROLE_CHAR = {"0": 1,
