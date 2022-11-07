@@ -135,7 +135,6 @@ def get_win_positions(field: list) -> list[list]:
     rows = []
     for i in range(0, len(field), row_width):
         rows.append(field[i:i + row_width])
-        i += row_width
 
     # колонки
     cols = list(zip(*rows))
