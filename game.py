@@ -219,12 +219,10 @@ def who_win(field: list) -> (int, int):
         if all([i == 1 for i in row]):
             game_over = True
             winner = 1
-            print(f"Игра закончена. Выйграли: {get_role_char(winner)}")
-            draw_field(field)
-            return game_over, winner
         if all([i == 2 for i in row]):
             game_over = True
             winner = 2
+        if game_over:
             print(f"Игра закончена. Выйграли: {get_role_char(winner)}")
             draw_field(field)
             return game_over, winner
