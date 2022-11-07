@@ -44,8 +44,6 @@ def play_game(field: list, who_starts: int) -> None:
     who_goes = who_starts
 
     while not all(who_win(field)) and found_empty_cells(field):
-        draw_field(field)
-
         while True:
             user_choice = input(f"Ход для игрока {get_role_char(who_goes)}. "
                                     f"Введите индекс ячейки игрового поля\n")
@@ -221,20 +219,24 @@ def who_win(field: list) -> (int, int):
             game_over = True
             winner = 1
             print(f"Игра закончена. Выйграли: {get_role_char(winner)}")
+            draw_field(field)
             return game_over, winner
         if all([i == 2 for i in row]):
             game_over = True
             winner = 2
             print(f"Игра закончена. Выйграли: {get_role_char(winner)}")
+            draw_field(field)
             return game_over, winner
 
     if not found_empty_cells(field):
         game_over = True
         winner = 0
         print("Игра закончена. Никто не победил или ничья")
+        draw_field(field)
         return game_over, winner
 
     print("Игра ещё идет.")
+    draw_field(field)
     return game_over, winner
 
 
